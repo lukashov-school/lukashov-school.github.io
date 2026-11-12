@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#201312" />
+  <meta name="description" content="Сведения об образовательной организации — Lukashov School." />
+  <title>Сведения об образовательной организации — Lukashov School</title>
+  <style>
+    :root {
+      --ink: #201312;
+      --paper: #fff5eb;
+      --accent: #db8566;
+      --wine: #8f364b;
+      --muted: rgba(255,245,235,.66);
+      --line: rgba(255,245,235,.18);
+      --light-ink: #2a171b;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--ink); }
+    body { margin: 0; min-width: 320px; color: var(--paper); background: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 18px; max-width: 1320px; margin: 0 auto; padding: 23px clamp(22px, 5vw, 68px); }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 900; letter-spacing: .13em; }
+    .brand-mark { display: grid; place-items: center; width: 31px; height: 31px; border-radius: 9px; background: var(--accent); color: var(--ink); box-shadow: 4px 4px 0 var(--wine); font-family: Georgia, serif; font-size: 20px; }
+    .top-actions { display: flex; align-items: center; gap: 17px; }
+    .back-link { border-bottom: 1px solid rgba(255,245,235,.48); padding: 6px 0; color: var(--paper); font-size: 10px; font-weight: 850; letter-spacing: .1em; }
+    .back-link:hover { color: var(--accent); border-color: var(--accent); }
+    .a11y-toggle { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line); padding: 8px 10px; background: transparent; color: var(--paper); cursor: pointer; font-size: 9px; font-weight: 850; letter-spacing: .07em; }
+    .a11y-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
+    .hero { position: relative; overflow: hidden; padding: clamp(62px, 10vw, 125px) clamp(22px, 5vw, 68px) clamp(58px, 8vw, 95px); background: linear-gradient(135deg, #201312, #30171e); }
+    .hero::after { content: ''; position: absolute; right: -10%; bottom: -95%; width: min(70vw, 880px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(219,133,102,.23), transparent 67%); pointer-events: none; }
+    .hero-inner { position: relative; z-index: 1; max-width: 1184px; margin: 0 auto; }
+    .eyebrow { display: flex; align-items: center; gap: 9px; color: var(--accent); font-size: 10px; font-weight: 900; letter-spacing: .16em; }
+    .eyebrow::before { content: ''; display: inline-block; width: 24px; height: 1px; background: currentColor; }
+    h1 { max-width: 800px; margin: 19px 0 0; font-size: clamp(42px, 6vw, 83px); font-weight: 820; line-height: .91; letter-spacing: -.07em; }
+    .hero-text { max-width: 600px; margin: 26px 0 0; color: var(--muted); font-size: 16px; line-height: 1.55; }
+    .hero-text strong { color: var(--paper); }
+
+    .layout { display: grid; grid-template-columns: 254px minmax(0, 1fr); gap: clamp(36px, 7vw, 110px); max-width: 1320px; margin: 0 auto; padding: clamp(55px, 8vw, 100px) clamp(22px, 5vw, 68px) clamp(90px, 12vw, 150px); }
+    .side-nav { align-self: start; position: sticky; top: 25px; padding: 17px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .side-nav p { margin: 0 0 12px; color: var(--accent); font-size: 9px; font-weight: 900; letter-spacing: .15em; }
+    .side-nav a { display: block; padding: 7px 0; color: var(--muted); font-size: 11px; font-weight: 700; line-height: 1.24; }
+    .side-nav a:hover { color: var(--paper); }
+    .content { min-width: 0; }
+    .legal-section { scroll-margin-top: 28px; padding: 0 0 clamp(48px, 7vw, 82px); margin: 0 0 clamp(48px, 7vw, 82px); border-bottom: 1px solid var(--line); }
+    .legal-section:last-child { margin-bottom: 0; }
+    .legal-section { margin: 0 0 10px; padding: 0; border: 1px solid var(--line); background: rgba(255,245,235,.025); }
+    .legal-section[open] { background: rgba(255,245,235,.045); }
+    .legal-section summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 21px 23px; cursor: pointer; list-style: none; }
+    .legal-section summary::-webkit-details-marker { display: none; }
+    .legal-section summary span { color: var(--paper); font-size: clamp(18px, 2.1vw, 27px); font-weight: 780; line-height: 1.04; letter-spacing: -.045em; }
+    .legal-section summary i { display: grid; flex: 0 0 27px; width: 27px; height: 27px; place-items: center; border: 1px solid rgba(219,133,102,.6); border-radius: 50%; color: var(--accent); font-family: Georgia,serif; font-size: 23px; font-style: normal; line-height: 1; }
+    .legal-section[open] summary { border-bottom: 1px solid var(--line); }
+    .legal-section[open] summary i { color: var(--paper); border-color: var(--paper); }
+    .legal-section[open] summary i { font-size: 0; }
+    .legal-section[open] summary i::after { content: '−'; font-size: 23px; }
+    .section-content { padding: 0 23px 27px; }
+    .section-content .section-intro { margin-top: 18px; }
+    .section-content .info-grid, .section-content .document-list, .section-content .simple-card, .section-content .notice { margin-top: 24px; }
+    h2 { margin: 10px 0 0; color: var(--paper); font-size: clamp(27px, 3.4vw, 45px); font-weight: 800; line-height: .98; letter-spacing: -.06em; }
+    .section-intro { max-width: 710px; margin: 19px 0 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .info-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin-top: 29px; background: var(--line); border: 1px solid var(--line); }
+    .info-item { min-height: 104px; padding: 18px; background: #261517; }
+    .info-item.full { grid-column: 1 / -1; }
+    .info-item dt { color: var(--accent); font-size: 9px; font-weight: 900; letter-spacing: .13em; }
+    .info-item dd { margin: 8px 0 0; color: var(--paper); font-size: 13px; font-weight: 700; line-height: 1.43; }
+    .info-item dd a { text-decoration: underline; text-decoration-color: rgba(255,245,235,.35); text-underline-offset: 3px; }
+    .info-item dd a:hover { color: var(--accent); }
+    .document-list { display: grid; gap: 9px; margin-top: 28px; }
+    .document-link { display: flex; align-items: center; justify-content: space-between; gap: 22px; padding: 17px 19px; border: 1px solid var(--line); background: rgba(255,245,235,.04); transition: background .2s ease, transform .2s ease, border-color .2s ease; }
+    .document-link:hover { transform: translateX(4px); background: rgba(255,245,235,.08); border-color: rgba(219,133,102,.6); }
+    .document-link b { display: block; color: var(--paper); font-size: 13px; line-height: 1.3; }
+    .document-link small { display: block; margin-top: 5px; color: var(--muted); font-size: 10px; font-weight: 650; }
+    .document-file { flex: 0 0 auto; color: var(--accent); font-size: 10px; font-weight: 900; letter-spacing: .11em; }
+    .notice { max-width: 720px; margin-top: 28px; padding: 20px; border-left: 3px solid var(--accent); background: rgba(219,133,102,.08); color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .notice b { color: var(--paper); }
+    .simple-card { max-width: 720px; margin-top: 27px; padding: 23px; border: 1px solid var(--line); background: rgba(255,245,235,.04); color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .simple-card strong { color: var(--paper); }
+
+    .legal-footer { border-top: 1px solid var(--line); background: #1a1011; }
+    .footer-inner { display: grid; grid-template-columns: minmax(190px, .75fr) repeat(2, minmax(190px, 1fr)); gap: 35px; max-width: 1320px; margin: 0 auto; padding: 42px clamp(22px, 5vw, 68px) 55px; }
+    .footer-brand { color: var(--muted); font-size: 11px; font-weight: 800; line-height: 1.45; letter-spacing: .1em; }
+    .footer-title { display: block; margin-bottom: 13px; color: var(--accent); font-size: 9px; font-weight: 900; letter-spacing: .15em; }
+    .footer-links { display: grid; gap: 8px; }
+    .footer-links a { color: var(--muted); font-size: 11px; line-height: 1.35; }
+    .footer-links a:hover { color: var(--paper); }
+
+    body.a11y, body.a11y .hero, body.a11y .legal-footer { background: #fff !important; color: #000 !important; }
+    body.a11y * { color: #000 !important; border-color: #000 !important; box-shadow: none !important; text-shadow: none !important; background-image: none !important; }
+    body.a11y .info-grid { background: #000 !important; }
+    body.a11y .info-item, body.a11y .document-link, body.a11y .simple-card, body.a11y .notice { background: #fff !important; }
+    body.a11y a { text-decoration: underline !important; text-underline-offset: 3px; }
+    /* Larger text in the low-vision mode while keeping the accordion compact. */
+    body.a11y .brand { font-size: 13px; }
+    body.a11y .back-link, body.a11y .a11y-toggle, body.a11y .eyebrow, body.a11y .side-nav a { font-size: 12px; line-height: 1.45; }
+    body.a11y .hero-text, body.a11y .section-intro, body.a11y .simple-card, body.a11y .notice { font-size: 16px; line-height: 1.65; }
+    body.a11y .legal-section summary span { font-size: 25px; }
+    body.a11y .info-item dt { font-size: 11px; }
+    body.a11y .info-item dd { font-size: 15px; line-height: 1.5; }
+    body.a11y .document-link b { font-size: 15px; }
+    body.a11y .document-link small, body.a11y .document-file, body.a11y .footer-links a { font-size: 12px; line-height: 1.5; }
+
+    @media (max-width: 780px) {
+      .topbar { padding: 19px 21px; }
+      .top-actions { gap: 11px; }
+      .back-link { font-size: 9px; }
+      .a11y-toggle { padding: 7px; font-size: 0; }
+      .a11y-toggle::before { content: '◉'; font-size: 15px; }
+      .hero { padding: 66px 22px 58px; }
+      .layout { grid-template-columns: 1fr; gap: 38px; padding: 52px 22px 82px; }
+      .side-nav { position: static; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); column-gap: 16px; }
+      .side-nav p { grid-column: 1 / -1; }
+      .side-nav a { font-size: 10px; }
+      .info-grid { grid-template-columns: 1fr; }
+      .info-item.full { grid-column: auto; }
+      .legal-section summary { padding: 17px; }
+      .legal-section summary span { font-size: 18px; }
+      .section-content { padding: 0 17px 20px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 27px; padding: 38px 22px 47px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Lukashov School — на главную"><span class="brand-mark">N</span><span>LUKASHOV SCHOOL</span></a>
+    <div class="top-actions">
+      <a class="back-link" href="index.html">НА ГЛАВНУЮ</a>
+      <button class="a11y-toggle" type="button" aria-pressed="false">◉ ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow">ОФИЦИАЛЬНЫЙ РАЗДЕЛ</div>
+        <h1>Сведения об<br>образовательной<br>организации</h1>
+        <p class="hero-text">Информация представлена в открытом доступе. Документы доступны для просмотра и скачивания <strong>без регистрации</strong>.</p>
+      </div>
+    </section>
+
+    <div class="layout">
+      <nav class="side-nav" aria-label="Навигация по разделу">
+        <p>НАВИГАЦИЯ</p>
+        <a href="#basic">Основные сведения</a>
+        <a href="#structure">Структура и управление</a>
+        <a href="#documents">Документы</a>
+        <a href="#education">Образование</a>
+        <a href="#staff">Руководство и педсостав</a>
+        <a href="#facilities">Материально-техническое обеспечение</a>
+        <a href="#standards">Стандарты и требования</a>
+        <a href="#paid">Платные услуги</a>
+        <a href="#finance">Финансовая деятельность</a>
+        <a href="#vacancies">Вакантные места</a>
+        <a href="#accessibility">Доступная среда</a>
+        <a href="#international">Международное сотрудничество</a>
+      </nav>
+
+      <div class="content">
+        <details class="legal-section" id="basic">
+          <summary><span>Основные сведения</span><i aria-hidden="true">+</i></summary>
+          <div class="section-content">
+          <p class="section-intro">Сведения об индивидуальном предпринимателе, осуществляющем образовательную деятельность.</p>
+          <dl class="info-grid">
+            <div class="info-item full"><dt>НАИМЕНОВАНИЕ</dt><dd>Индивидуальный предприниматель ЛУКАШОВ НИКИТА ГЕОРГИЕВИЧ</dd></div>
+            <div class="info-item"><dt>ИНН</dt><dd>920357680415</dd></div>
+            <div class="info-item"><dt>ОГРНИП</dt><dd>326920000015031</dd></div>
+            <div class="info-item"><dt>ВИД ПРЕДПРИНИМАТЕЛЬСТВА</dt><dd>Индивидуальный предприниматель</dd></div>
+            <div class="info-item"><dt>ДАТА РЕГИСТРАЦИИ</dt><dd>22.06.2026 г.</dd></div>
+            <div class="info-item full"><dt>РЕГИСТРАТОР</dt><dd>Управление Федеральной налоговой службы по г. Севастополю</dd></div>
+            <div class="info-item"><dt>ДАТА ПОСТАНОВКИ НА УЧЁТ</dt><dd>22.06.2026 г.</dd></div>
+            <div class="info-item"><dt>НАЛОГОВЫЙ ОРГАН</dt><dd>Управление Федеральной налоговой службы по г. Севастополю</dd></div>
+            <div class="info-item"><dt>МЕСТО НАХОЖДЕНИЯ</dt><dd>г. Севастополь</dd></div>
+            <div class="info-item"><dt>РЕЖИМ РАБОТЫ</dt><dd>Понедельник–пятница, 9:00–18:00 по местному времени</dd></div>
+            <div class="info-item"><dt>ТЕЛЕФОН</dt><dd><a href="tel:+79780900420">+7 (978) 090-04-20</a></dd></div>
+            <div class="info-item"><dt>ЭЛЕКТРОННАЯ ПОЧТА</dt><dd><a href="mailto:NI_LUK@MAIL.RU">NI_LUK@MAIL.RU</a></dd></div>
+          </dl>
+        </div>
+        </details>
+
+        <details class="legal-section" id="structure">
+          <summary><span>Структура и органы управления</span><i aria-hidden="true">+</i></summary>
+          <div class="section-content">
+          <div class="simple-card"><strong>Индивидуальный предприниматель ЛУКАШОВ НИКИТА ГЕОРГИЕВИЧ</strong><br>ИНН 920357680415<br>ОГРНИП 326920000015031<br>Телефон: <a href="tel:+79780900420">+7 (978) 090-04-20</a><br>Электронная почта: <a href="mailto:NI_LUK@MAIL.RU">NI_LUK@MAIL.RU</a><br><br><strong>Структурные подразделения отсутствуют.</strong></div>
+        </div>
+        </details>
+
+        <details class="legal-section" id="documents">
+          <summary><span>Документы</span><i aria-hidden="true">+</i></summary>
+          <div class="section-content">
+          <p class="section-intro">Документы размещены в формате PDF и доступны без дополнительной регистрации.</p>
+          <div class="document-list">
+            <a class="document-link" href="ip-registration-record.html"><span><b>Лист записи индивидуального предпринимателя</b><small>Документ о регистрации ИП</small></span><span class="document-file">ОТКРЫТЬ →</span></a>
+            <a class="document-link" href="public-offer.html"><span><b>Публичная оферта</b><small>Условия оказания услуг</small></span><span class="document-file">ОТКРЫТЬ →</span></a>
+            <a class="document-link" href="privacy-policy.html"><span><b>Политика в отношении обработки персональных данных</b><small>Правила обработки персональных данных</small></span><span class="document-file">ОТКРЫТЬ →</span></a>
+            <a class="document-link" href="personal-data-consent.html"><span><b>Согласие на обработку персональных данных</b><small>Документ для ознакомления</small></span><span class="document-file">ОТКРЫТЬ →</span></a>
+            <a class="document-link" href="testimonial-data-consent.html"><span><b>Согласие на распространение персональных данных</b><small>Отзывы и кейсы учеников</small></span><span class="document-file">ОТКРЫТЬ →</span></a>
+            <a class="document-link" href="mailing-consent.html"><span><b>Согласие на рассылки</b><small>Информационные сообщения</small></span><span class="document-file">ОТКРЫТЬ →</span></a>
+          </div>
+        </div>
+        </details>
+
+        <details class="legal-section" id="education">
+          <summary><span>Образование</span><i aria-hidden="true">+</i></summary>
+          <div class="section-content">
+          <div class="simple-card"><strong>Реализуемая программа:</strong><br><br>Дополнительная общеобразовательная общеразвивающая программа «Lukashov School».</div>
+          <div class="notice"><b>Образовательная программа будет размещена после утверждения и подписания.</b> После подготовки документа в этот раздел будет добавлена ссылка на PDF-файл образовательной программы.</div>
+        </div>
+        </details>
+
+        <details class="legal-section" id="staff">
+          <summary><span>Руководство и педагогический состав</span><i aria-hidden="true">+</i></summary>
+          <div class="section-content">
+          <div class="simple-card"><strong>Руководитель — Индивидуальный предприниматель ЛУКАШОВ НИКИТА ГЕОРГИЕВИЧ.</strong><br>ИНН 920357680415<br>ОГРНИП 326920000015031<br><br>Данный подраздел находится в разработке.</div>
+        </div>
+        </details>
+
+        <details class="legal-section" id="facilities">
+          <summary><span>Материально-техническое обеспечение и оснащённость образовательного процесса</span><i aria-hidden="true">+</i></summary>
+          <div class="section-content"><div class="simple-card">Данный подраздел сайта находится в разработке.</div></div>
+        </details>
+        <details class="legal-section" id="standards">
+          <summary><span>Образовательные стандарты и требования</span><i aria-hidden="true">+</i></summary>
+          <div class="section-content"><div class="simple-card">Данный подраздел сайта находится в разработке.</div></div>
+        </details>
+        <details class="legal-section" id="paid">
+          <summary><span>Платные образовательные услуги</span><i aria-hidden="true">+</i></summary>
+          <div class="section-content"><div class="simple-card">Данный подраздел сайта находится в разработке.</div></div>
+        </details>
+        <details class="legal-section" id="finance">
+          <summary><span>Финансово-хозяйственная деятельность</span><i aria-hidden="true">+</i></summary>
+          <div class="section-content"><div class="simple-card">Данный подраздел сайта находится в разработке.</div></div>
+        </details>
+        <details class="legal-section" id="vacancies">
+          <summary><span>Вакантные места для приёма (перевода) обучающихся</span><i aria-hidden="true">+</i></summary>
+          <div class="section-content"><div class="simple-card">Данный подраздел сайта находится в разработке.</div></div>
+        </details>
+        <details class="legal-section" id="accessibility">
+          <summary><span>Доступная среда</span><i aria-hidden="true">+</i></summary>
+          <div class="section-content"><div class="simple-card">Данный подраздел сайта находится в разработке.<br><br>На сайте доступна версия для слабовидящих: используйте кнопку в шапке страницы.</div></div>
+        </details>
+        <details class="legal-section" id="international">
+          <summary><span>Международное сотрудничество</span><i aria-hidden="true">+</i></summary>
+          <div class="section-content"><div class="simple-card">Данный подраздел сайта находится в разработке.</div></div>
+        </details>
+      </div>
+    </div>
+  </main>
+
+  <footer class="legal-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">LUKASHOV SCHOOL<br><span style="color:var(--accent)">ЕГЭ ПО ФИЗИКЕ</span></div>
+      <div><span class="footer-title">ДОКУМЕНТЫ</span><nav class="footer-links"><a href="public-offer.html">Публичная оферта</a><a href="privacy-policy.html">Политика обработки персональных данных</a><a href="personal-data-consent.html">Согласие на обработку персональных данных</a><a href="testimonial-data-consent.html">Согласие на распространение данных для отзывов</a><a href="mailing-consent.html">Согласие на рассылки</a><a href="index.html">Главная страница</a></nav></div>
+      <div><span class="footer-title">ОФИЦИАЛЬНЫЕ РЕСУРСЫ</span><nav class="footer-links"><a href="https://edu.sev.gov.ru/?ysclid=mvl3vgg444903672504" target="_blank" rel="noopener noreferrer">Департамент образования и науки города Севастополя</a><a href="https://m.vk.ru/club241578683" target="_blank" rel="noopener noreferrer">Сообщество VK</a></nav></div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const button = document.querySelector('.a11y-toggle');
+      const stored = localStorage.getItem('lukashov-a11y') === 'true';
+      const setMode = (enabled) => {
+        document.body.classList.toggle('a11y', enabled);
+        button.setAttribute('aria-pressed', String(enabled));
+        button.textContent = enabled ? '◉ ОБЫЧНАЯ ВЕРСИЯ' : '◉ ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ';
+        localStorage.setItem('lukashov-a11y', String(enabled));
+      };
+      setMode(stored);
+      button.addEventListener('click', () => setMode(!document.body.classList.contains('a11y')));
+      const openHash = (hash, smooth = false) => {
+        const target = document.querySelector(hash);
+        if (target && target.tagName === 'DETAILS') {
+          target.open = true;
+          target.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+        }
+      };
+      document.querySelectorAll('.side-nav a[href^="#"]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          const hash = link.getAttribute('href');
+          history.replaceState(null, '', hash);
+          openHash(hash, true);
+        });
+      });
+      if (location.hash) openHash(location.hash);
+    })();
+  </script>
+</body>
+</html>

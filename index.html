@@ -62,6 +62,11 @@
     .brand-mark svg { width: 28px; height: 28px; overflow: visible; }
     .brand-mark .orbit { fill: none; stroke: currentColor; stroke-width: 1.6; opacity: .8; }
     .brand-mark .n-letter { fill: currentColor; font-family: Arial, sans-serif; font-size: 13px; font-weight: 900; }
+    .header-tools { display: flex; align-items: center; gap: 18px; }
+    .legal-nav { color: var(--muted); font-size: 9px; font-weight: 800; letter-spacing: .11em; transition: color .2s ease; }
+    .legal-nav:hover { color: var(--paper); }
+    .a11y-toggle { display: inline-flex; align-items: center; gap: 5px; border: 1px solid var(--line); padding: 7px 8px; background: transparent; color: var(--muted); cursor: pointer; font-size: 8px; font-weight: 850; letter-spacing: .06em; }
+    .a11y-toggle:hover { border-color: var(--acid); color: var(--paper); }
     .online { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .14em; }
     .online i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--acid); box-shadow: 0 0 0 4px rgba(219,133,102,.13); }
 
@@ -127,6 +132,33 @@
     .scroll-mark { display: flex; align-items: center; gap: 8px; }
     .scroll-mark::before { content: ''; width: 28px; height: 1px; background: var(--acid); }
 
+    .site-legal-footer { position: relative; z-index: 1; max-width: 1600px; margin: 0 auto; padding: 10px clamp(24px, 5vw, 76px) 52px; }
+    .site-legal-footer-inner { display: grid; grid-template-columns: minmax(180px, .7fr) repeat(2, minmax(220px, 1fr)); gap: 32px; padding: 30px 0 0; border-top: 1px solid var(--line); }
+    .site-legal-footer small { display: block; color: var(--muted); font-size: 9px; font-weight: 850; letter-spacing: .13em; }
+    .site-legal-footer h4 { margin: 0 0 11px; color: var(--acid); font-size: 9px; font-weight: 900; letter-spacing: .14em; }
+    .site-legal-links { display: grid; gap: 7px; }
+    .site-legal-links a { color: var(--muted); font-size: 10px; line-height: 1.35; }
+    .site-legal-links a:hover { color: var(--paper); }
+
+    body.a11y, body.a11y .page, body.a11y .longform { background: #fff !important; color: #000 !important; }
+    body.a11y * { color: #000 !important; border-color: #000 !important; box-shadow: none !important; text-shadow: none !important; background-image: none !important; }
+    body.a11y .telegram, body.a11y .brand-mark, body.a11y .degree, body.a11y .mobile-contact { background: #fff !important; }
+    body.a11y .noise, body.a11y .visual, body.a11y .portrait-light, body.a11y .mobile-teacher-bottom, body.a11y .mobile-teacher-bottom::before { display: none !important; }
+    body.a11y .page, body.a11y .longform, body.a11y .mobile-contact { filter: grayscale(1) contrast(1.15); }
+    body.a11y a { text-decoration: underline !important; text-underline-offset: 3px; }
+    /* Slightly larger readable type without changing the overall grid. */
+    body.a11y .brand { font-size: 13px; }
+    body.a11y .legal-nav, body.a11y .a11y-toggle, body.a11y .online, body.a11y .eyebrow, body.a11y .section-kicker { font-size: 11px; }
+    body.a11y .lead { font-size: 20px; line-height: 1.65; }
+    body.a11y .telegram { font-size: 15px; }
+    body.a11y .life-link { font-size: 12px; }
+    body.a11y .result span { font-size: 12px; line-height: 1.4; }
+    body.a11y .score-copy p, body.a11y .cases-copy p, body.a11y .about-intro > p, body.a11y .bio-copy { font-size: 17px; line-height: 1.65; }
+    body.a11y .chart-topline, body.a11y .bar-label, body.a11y .chart-foot { font-size: 12px; line-height: 1.5; }
+    body.a11y .profile-item b { font-size: 15px; }
+    body.a11y .profile-item span, body.a11y .trial-copy p { font-size: 13px; line-height: 1.55; }
+    body.a11y .site-legal-footer small, body.a11y .site-legal-footer h4, body.a11y .site-legal-links a { font-size: 12px; line-height: 1.5; }
+
     .mobile-contact { display: none; }
 
     .mobile-teacher-bottom { display: none; }
@@ -134,6 +166,10 @@
     @media (max-width: 760px) {
       body { padding-bottom: 82px; }
       .page { padding: 21px 22px 19px; min-height: 100svh; }
+      .header-tools { gap: 9px; }
+      .legal-nav { display: none; }
+      .a11y-toggle { width: 30px; height: 30px; justify-content: center; padding: 0; font-size: 0; }
+      .a11y-toggle::before { content: '◉'; font-size: 14px; }
       main { display: block; }
       .copy { padding-top: 48px; }
       h1 { font-size: clamp(54px, 17.6vw, 88px); max-width: 570px; }
@@ -302,6 +338,8 @@
       .mentor-note { grid-template-columns: 1fr; gap: 27px; margin-top: 36px; }
       .final-cta { padding: 0 22px 25px; }
       .final-cta-inner { align-items: flex-start; flex-direction: column; }
+      .site-legal-footer { padding: 8px 22px 45px; }
+      .site-legal-footer-inner { grid-template-columns: 1fr; gap: 23px; padding-top: 25px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -325,17 +363,19 @@
         </span>
         <span class="brand-name">LUKASHOV<small>SCHOOL</small></span>
       </a>
-      <span class="online"><i></i> НАБОР ОТКРЫТ</span>
+      <div class="header-tools">
+        <a class="legal-nav" href="svedeniya.html">СВЕДЕНИЯ</a>
+        <button class="a11y-toggle" type="button" aria-pressed="false">◉ ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ</button>
+      </div>
     </header>
 
     <main id="top">
       <section class="copy" aria-label="Подготовка к ЕГЭ по физике">
-        <div class="eyebrow"><b>✦</b> НИКИТА ЛУКАШОВ · ЕГЭ 2027</div>
         <h1>Физика,<br>которую <em>понимают.</em></h1>
         <p class="lead">Не заучивать формулы, а видеть логику задач. Системная подготовка к ЕГЭ — <strong>спокойно, сильно, на свой максимум.</strong></p>
         <div class="actions">
           <!-- Direct Telegram contact -->
-          <a class="telegram" href="https://t.me/K_ii_kk" target="_blank" rel="noopener noreferrer" aria-label="Перейти в Telegram">
+          <a class="telegram" href="https://t.me/nikita_physic" target="_blank" rel="noopener noreferrer" aria-label="Перейти в Telegram">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.8 3.5 18.5 20c-.25 1.17-.9 1.46-1.83.9l-5.07-3.74-2.45 2.36c-.27.27-.5.5-1.02.5l.36-5.16 9.39-8.48c.41-.36-.09-.56-.63-.2L5.65 13.5.66 11.94c-1.08-.34-1.1-1.08.23-1.6L20.4 2.82c.9-.33 1.69.2 1.4.68Z"/></svg>
             Написать в Telegram
           </a>
@@ -364,15 +404,10 @@
       </section>
     </main>
 
-    <footer>
-      <span>ВРЕМЯ ПОНЯТЬ ФИЗИКУ</span>
-      <span class="scroll-mark">ЕГЭ 2027</span>
-    </footer>
   </div>
 
   <div class="longform">
     <section class="section proof" aria-labelledby="score-title">
-      <div class="section-kicker">РЕЗУЛЬТАТ В ЦИФРАХ</div>
       <h2 class="section-heading" id="score-title">Не просто занятия.<br><em>Понятный рост.</em></h2>
       <div class="score-layout">
         <div class="score-copy">
@@ -391,7 +426,6 @@
               <div class="bar-track"><div class="bar nikita"></div></div>
             </div>
           </div>
-          <p class="chart-foot">Разница — <b>не магия и не зубрёжка</b>. Это регулярная обратная связь, ясный план и разбор ошибок до того, как они станут привычкой.</p>
         </div>
       </div>
     </section>
@@ -402,7 +436,6 @@
           <div class="section-kicker">КАК ВЫГЛЯДЯТ ЗАНЯТИЯ</div>
           <h2 class="section-heading" id="cases-title">Объясняю<br><em>прямо на доске.</em></h2>
           <p>Без чтения параграфов из учебника. На занятии рисуем схемы, строим графики, разбираем формулы и доводим каждую задачу до понятного решения.</p>
-          <span class="board-note"><i></i> РАЗБОРЫ НА РЕАЛЬНОЙ ДОСКЕ</span>
         </div>
         <div class="cases-gallery" aria-label="Примеры конспектов и разборов Никиты">
           <figure class="demo-card oscillations">
@@ -439,7 +472,6 @@
         <div class="bio-copy">
           <p>Здравствуйте! Меня зовут <strong>Никита</strong>, и я готовлю к ЕГЭ по физике с 2022 года. Мне важно не просто дать формулу, а показать, как мыслить в задаче — тогда результат становится закономерным.</p>
           <p>За три месяца системной работы ученики прибавляют <strong>30–35 баллов</strong>. В 2026 году в одной из моих групп сразу два ученика написали ЕГЭ на 98 баллов.</p>
-          <span class="bio-sign">Никита Лукашов</span>
         </div>
         <div class="profile-grid" aria-label="Образование и достижения">
           <article class="profile-item"><span class="profile-num">2020—2025</span><b>Высшее техническое образование</b><span>Ульяновский институт гражданской авиации · пилот-инженер</span></article>
@@ -451,25 +483,55 @@
 
       <div class="trial-card">
         <div class="trial-copy">
-          <div class="section-kicker">ЕГЭ 2027 · НАБОР ОТКРЫТ</div>
           <h3>Приходите на бесплатное пробное занятие.</h3>
-          <p>Составим план подготовки, разберём типичные ошибки ЕГЭ 2027 и уже на первом занятии найдём точки роста для вашего результата.</p>
+          <p>Составим план подготовки, разберём типичные ошибки ЕГЭ 2026 и уже на первом занятии найдём точки роста для вашего результата.</p>
         </div>
-        <a class="telegram" href="https://t.me/K_ii_kk" target="_blank" rel="noopener noreferrer">Записаться</a>
+        <a class="telegram" href="https://t.me/nikita_physic" target="_blank" rel="noopener noreferrer">Записаться</a>
       </div>
     </section>
 
-    <footer class="final-cta">
-      <div class="final-cta-inner">
-        <p>LUKASHOV SCHOOL · ЕГЭ ПО ФИЗИКЕ</p>
-        <a class="telegram" href="https://t.me/K_ii_kk" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+    <section class="site-legal-footer" aria-label="Юридическая информация">
+      <div class="site-legal-footer-inner">
+        <small>LUKASHOV SCHOOL<br><span style="color:var(--acid)">ЕГЭ ПО ФИЗИКЕ</span></small>
+        <div>
+          <h4>ДОКУМЕНТЫ</h4>
+          <nav class="site-legal-links">
+            <a href="svedeniya.html">Сведения об образовательной организации</a>
+            <a href="public-offer.html">Публичная оферта</a>
+            <a href="privacy-policy.html">Политика обработки персональных данных</a>
+            <a href="personal-data-consent.html">Согласие на обработку персональных данных</a>
+            <a href="testimonial-data-consent.html">Согласие на распространение данных для отзывов</a>
+            <a href="mailing-consent.html">Согласие на рассылки</a>
+          </nav>
+        </div>
+        <div>
+          <h4>ОФИЦИАЛЬНЫЕ РЕСУРСЫ</h4>
+          <nav class="site-legal-links">
+            <a href="https://edu.sev.gov.ru/?ysclid=mvl3vgg444903672504" target="_blank" rel="noopener noreferrer">Департамент образования и науки города Севастополя</a>
+            <a href="https://m.vk.ru/club241578683" target="_blank" rel="noopener noreferrer">Сообщество VK</a>
+          </nav>
+        </div>
       </div>
-    </footer>
+    </section>
     <div class="mobile-teacher-bottom" aria-label="Никита Лукашов, преподаватель по физике">
       <img src="assets/nikita-cutout-soft.png" alt="Никита Лукашов" loading="lazy" />
     </div>
   </div>
 
-  <a class="mobile-contact" href="https://t.me/K_ii_kk" target="_blank" rel="noopener noreferrer" aria-label="Написать Никите в Telegram"><span>↗</span> НАПИСАТЬ В TELEGRAM</a>
+  <a class="mobile-contact" href="https://t.me/nikita_physic" target="_blank" rel="noopener noreferrer" aria-label="Написать Никите в Telegram"><span>↗</span> НАПИСАТЬ В TELEGRAM</a>
+  <script>
+    (() => {
+      const button = document.querySelector('.a11y-toggle');
+      const stored = localStorage.getItem('lukashov-a11y') === 'true';
+      const setMode = (enabled) => {
+        document.body.classList.toggle('a11y', enabled);
+        button.setAttribute('aria-pressed', String(enabled));
+        button.textContent = enabled ? '◉ ОБЫЧНАЯ ВЕРСИЯ' : '◉ ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ';
+        localStorage.setItem('lukashov-a11y', String(enabled));
+      };
+      setMode(stored);
+      button.addEventListener('click', () => setMode(!document.body.classList.contains('a11y')));
+    })();
+  </script>
 </body>
 </html>

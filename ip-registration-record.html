@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#201312" />
+  <title>Лист записи индивидуального предпринимателя — Lukashov School</title>
+  <style>
+    :root { --ink:#201312; --paper:#fff5eb; --accent:#db8566; --wine:#8f364b; --muted:rgba(255,245,235,.67); --line:rgba(255,245,235,.18); }
+    * { box-sizing:border-box; } html { background:var(--ink); } body { min-width:320px; margin:0; color:var(--paper); background:var(--ink); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; } a { color:inherit; text-decoration:none; }
+    .top { display:flex; align-items:center; justify-content:space-between; gap:20px; max-width:1340px; margin:0 auto; padding:22px clamp(22px,5vw,68px); }
+    .brand { display:flex; align-items:center; gap:10px; font-size:11px; font-weight:900; letter-spacing:.13em; } .mark { display:grid; place-items:center; width:31px; height:31px; border-radius:9px; background:var(--accent); color:var(--ink); box-shadow:4px 4px 0 var(--wine); font-family:Georgia,serif; font-size:20px; }
+    .back { padding-bottom:5px; border-bottom:1px solid rgba(255,245,235,.48); color:var(--muted); font-size:10px; font-weight:850; letter-spacing:.1em; } .back:hover { color:var(--accent); border-color:var(--accent); }
+    main { max-width:1340px; margin:0 auto; padding:clamp(52px,7vw,100px) clamp(22px,5vw,68px) clamp(82px,10vw,125px); }
+    .kicker { display:flex; align-items:center; gap:9px; color:var(--accent); font-size:10px; font-weight:900; letter-spacing:.16em; } .kicker::before { content:""; width:24px; height:1px; background:currentColor; }
+    h1 { max-width:850px; margin:18px 0 0; font-size:clamp(39px,5.4vw,76px); font-weight:830; line-height:.94; letter-spacing:-.07em; } .intro { margin:20px 0 0; color:var(--muted); font-size:15px; line-height:1.55; }
+    .viewer { overflow:hidden; margin-top:44px; border:1px solid var(--line); background:#fff; box-shadow:13px 14px 0 var(--wine); } .viewer-head { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:14px 18px; background:#2b171a; color:var(--paper); } .viewer-head span { font-size:10px; font-weight:850; letter-spacing:.12em; } .open-pdf { flex:0 0 auto; padding:8px 10px; background:var(--accent); color:var(--ink); font-size:9px; font-weight:900; letter-spacing:.08em; } .viewer iframe { display:block; width:100%; height:min(76vh,920px); border:0; }
+    .fallback { margin:22px 0 0; color:var(--muted); font-size:12px; line-height:1.5; } .fallback a { color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
+    footer { border-top:1px solid var(--line); background:#1a1011; } .footer-grid { display:grid; grid-template-columns:minmax(180px,.75fr) repeat(2,minmax(210px,1fr)); gap:34px; max-width:1340px; margin:0 auto; padding:40px clamp(22px,5vw,68px) 52px; } .footer-mark { color:var(--muted); font-size:10px; font-weight:850; line-height:1.5; letter-spacing:.13em; } .footer-mark span { color:var(--accent); } footer b { display:block; margin-bottom:12px; color:var(--accent); font-size:9px; letter-spacing:.15em; } footer nav { display:grid; gap:8px; } footer nav a { color:var(--muted); font-size:11px; line-height:1.35; } footer nav a:hover { color:var(--paper); }
+    @media(max-width:720px) { .top { padding:19px 22px; } .back { font-size:9px; } main { padding:60px 22px 80px; } .viewer { margin-top:34px; box-shadow:7px 8px 0 var(--wine); } .viewer-head { align-items:flex-start; flex-direction:column; } .viewer iframe { height:62vh; } .footer-grid { grid-template-columns:1fr; gap:26px; padding:38px 22px 48px; } }
+  </style>
+</head>
+<body>
+  <header class="top"><a class="brand" href="index.html"><span class="mark">N</span><span>LUKASHOV SCHOOL</span></a><a class="back" href="svedeniya.html">← К СВЕДЕНИЯМ</a></header>
+  <main>
+    <div class="kicker">ДОКУМЕНТ ДЛЯ ОЗНАКОМЛЕНИЯ</div>
+    <h1>Лист записи индивидуального предпринимателя</h1>
+    <p class="intro">Документ о государственной регистрации ИП</p>
+    <section class="viewer" aria-label="Просмотр документа">
+      <div class="viewer-head"><span>PDF-ДОКУМЕНТ</span><a class="open-pdf" href="documents/ip-registration-record.pdf" target="_blank" rel="noopener noreferrer">ОТКРЫТЬ PDF ↗</a></div>
+      <iframe src="documents/ip-registration-record.pdf" title="Лист записи индивидуального предпринимателя"></iframe>
+    </section>
+    <p class="fallback">Если предпросмотр не открылся в браузере, <a href="documents/ip-registration-record.pdf" target="_blank" rel="noopener noreferrer">откройте документ в отдельной вкладке</a>.</p>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-mark">LUKASHOV SCHOOL<br><span>ЕГЭ ПО ФИЗИКЕ</span></div>
+      <div><b>ДОКУМЕНТЫ</b><nav><a href="public-offer.html">Публичная оферта</a><a href="privacy-policy.html">Политика обработки персональных данных</a><a href="personal-data-consent.html">Согласие на обработку персональных данных</a><a href="testimonial-data-consent.html">Согласие на распространение данных для отзывов</a><a href="mailing-consent.html">Согласие на рассылки</a><a href="svedeniya.html">Сведения об образовательной организации</a></nav></div>
+      <div><b>ОФИЦИАЛЬНЫЕ РЕСУРСЫ</b><nav><a href="https://edu.sev.gov.ru/?ysclid=mvl3vgg444903672504" target="_blank" rel="noopener noreferrer">Департамент образования и науки города Севастополя</a><a href="https://m.vk.ru/club241578683" target="_blank" rel="noopener noreferrer">Сообщество VK</a></nav></div>
+    </div>
+  </footer>
+</body>
+</html>
